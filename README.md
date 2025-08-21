@@ -54,55 +54,11 @@ cd azam-tv-portal
 npm install
 ```
 
-### 3. Environment Configuration (Optional)
-
-For design testing, you can skip database setup. The project works with fixed demo credentials.
-
-If you want to use a database, create a `.env` file in the root directory:
-
-```env
-# Database Configuration (Optional)
-DATABASE_URL="postgresql://username:password@localhost:5432/azamtv_db"
-
-# Session Configuration (Optional)
-SESSION_SECRET="your-super-secret-session-key-here"
 
 # Development Settings
 NODE_ENV="development"
 PORT=5000
 ```
-
-### 4. Database Setup (Optional)
-
-**For Design Testing**: Skip this step. The project uses fixed demo credentials.
-
-**For Full Database Integration**:
-
-#### Option A: Local PostgreSQL Setup
-
-1. Install PostgreSQL on your machine
-2. Create a new database:
-```sql
-CREATE DATABASE azamtv_db;
-```
-
-3. Update the `DATABASE_URL` in your `.env` file with your local database credentials
-
-#### Option B: Using Neon (Cloud PostgreSQL)
-
-1. Sign up at [neon.tech](https://neon.tech)
-2. Create a new project
-3. Copy the connection string to your `.env` file
-
-### 5. Initialize Database Schema (Optional)
-
-If using database integration, run the schema migration:
-
-```bash
-npm run db:push
-```
-
-This will create all necessary tables based on the schema defined in `shared/schema.ts`.
 
 ### 6. Start Development Server
 
